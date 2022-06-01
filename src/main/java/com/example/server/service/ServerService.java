@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 
-@Service
 public interface ServerService {
     Server create(Server server);
     Collection<Server> list(int limit);
