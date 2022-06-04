@@ -6,7 +6,6 @@ import org.springframework.http.HttpStatus;
 import java.time.LocalDateTime;
 import java.util.Map;
 
-
 public class Response {
     protected LocalDateTime timeStamp;
     protected int statusCode;
@@ -29,6 +28,18 @@ public class Response {
         this.reason = reason;
         this.message = message;
         this.developerMessage = developerMessage;
+        this.data = data;
+    }
+
+    public Response(LocalDateTime timeStamp,
+                    int statusCode,
+                    HttpStatus status,
+                    String message,
+                    Map<?, ?> data) {
+        this.timeStamp = timeStamp;
+        this.statusCode = statusCode;
+        this.status = status;
+        this.message = message;
         this.data = data;
     }
 
